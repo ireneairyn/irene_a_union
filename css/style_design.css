@@ -35,7 +35,7 @@ strong{
 p{
   padding:0px;
   margin: 0 0 10px;
-  }
+}
 a{
   color:#007cc3 ;
   text-decoration:underline;
@@ -52,18 +52,44 @@ small {
 em{
   font-style: italic;
 }
-iframe, .video_169{
-  width:100% !important;
-  margin:0px!important;
-  border:0px;
-  }
+
+.video-wrapper {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+}
+
+.js-video {
+  height: 0;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.js-video.widescreen {
+  padding-bottom: 56.34%;
+}
+.js-video.vimeo {
+  padding-top: 0;
+}
+.js-video embed, .js-video iframe, .js-video object, .js-video video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
 
 section ul li, .modal ul li{
   padding:0px;
   margin: 0px;
   margin-left:25px;
   list-style: disc;
-  }
+}
 
 .hr{
   display:block;
@@ -170,7 +196,6 @@ header{
   margin:0px auto;
   z-index:9999;
   background-color:#000;
-    background-color: rgba(0, 0, 0, 0.6);
 }
 
 header h1{
@@ -341,12 +366,15 @@ section.image .title h2{
   padding: 0px;
   text-transform: none;
   font-family: 'Tenor', serif;
-  font-size: 350%;
+  font-size: 450%;
+  text-shadow: 1px 1px 5px #333;
 }
 section.image .title span{
   display: block;
   line-height: 30px;
-  font-size: 95%;
+  font-size: 110%;
+  margin-top: 10px;
+  text-shadow: 1px 1px 5px #333;
 }
 
 section.height100{height: 100%;padding: 0px;}
@@ -546,11 +574,12 @@ ul.skills li{
   -o-transform: scale(1.1);
   transform: scale(1.1);
   opacity: 0.50;
-    filter: alpha(opacity=50);
+  filter: alpha(opacity=50);
 }
 
-
-
+.portfolio-item {
+  border-radius: 4px;
+}
 
 .form-input {
   background-color: transparent;
@@ -641,7 +670,7 @@ footer{
   background-color:#000;
   padding: 10px 0;
   color:#999;
-  }
+}
 
 footer .copyright{
   font-size:80%;
@@ -667,9 +696,9 @@ footer .copyright a{
 @media all and (max-width: 1300px){
 
 
-.sectiontitle{
-  margin-top: calc(33% - 25px);
-}
+  .sectiontitle{
+    margin-top: calc(33% - 25px);
+  }
 
 
 }
@@ -677,70 +706,70 @@ footer .copyright a{
 
 
 
-h1{
-  font-size:30px;
-  line-height:45px;
-}
-h2{
-  font-size:25px;
-  line-height:35px;
-}
-h3{
-  font-size:20px;
-  line-height:30px;
-}
-h4, h5{
-  font-size:18px;
-  line-height:25px;
-}
-.sectiontitle{
-  margin-top: calc(45% - 25px);
-}
-.sectiontitle .title h2{
-  font-size:40px;
-  line-height:60px;
-}
-.cuarto{
-  width: 48%;
-}
+  h1{
+    font-size:30px;
+    line-height:45px;
+  }
+  h2{
+    font-size:25px;
+    line-height:35px;
+  }
+  h3{
+    font-size:20px;
+    line-height:30px;
+  }
+  h4, h5{
+    font-size:18px;
+    line-height:25px;
+  }
+  .sectiontitle{
+    margin-top: calc(45% - 25px);
+  }
+  .sectiontitle .title h2{
+    font-size:40px;
+    line-height:60px;
+  }
+  .cuarto{
+    width: 48%;
+  }
 
 
 
 }
 @media all and (max-width: 767px){
-body{font-size:14px; padding-top:0px; padding-bottom:0px;}
+  body{font-size:14px; padding-top:0px; padding-bottom:0px;}
 
-header, header.scrolled, footer{
-  position:static ;
-  background-color:#000;
-  padding:10px 0 15px;
-}
+  header, header.scrolled, footer{
+    position:fixed ;
+    background-color:#000;
+    padding:10px 0 15px;
+  }
 
-header h1{
-  display: none;
-  float: none;
-  font-size: 35px;
-  margin-bottom: 15px;
-  text-align: center;
-}
+  header h1{
+    display: none;
+    float: none;
+    font-size: 35px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
 
-header nav{
-  float:none;
-  width:100%;
-}
-header nav ul{
-  display:none;
-  width:100%;
-  text-align:center;
-  list-style:none;
-  margin:0px;
-}
+  header nav{
+    float:none;
+    width:100%;
+  }
+  header nav ul{
+    display:none;
+    width:100%;
+    text-align:center;
+    list-style:none;
+    margin:0px;
+  }
 
-/* header nav ul li{
+  /* header nav ul li{
   display:inline-block;
   margin:0px;
   float:none;
-}*/
+  }*/
 
 header nav ul li{
   display:block;
@@ -752,7 +781,7 @@ header nav ul li{
 
 header nav ul li a{
   text-align:center;
-    font-size: 13px;
+  font-size: 13px;
   color:#CCC;
   border-bottom:1px solid #000;
 }
@@ -850,13 +879,14 @@ ul.social li a{
 
 @media all and (max-width: 504px){
 
-	#home {
-		height: 200px;
-	}
+  #home {
+    height: 200px;
+    margin-top: 50px;
+  }
 
-	header nav ul li{
-		width:50%;
-	}
+  header nav ul li{
+    width:50%;
+  }
 
 
 }
