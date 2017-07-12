@@ -736,7 +736,7 @@ footer .copyright a{
 
 
 }
-@media all and (max-width: 767px){
+@media all and (max-width: 850px){
   body{font-size:14px; padding-top:0px; padding-bottom:0px;}
 
   header, header.scrolled, footer{
