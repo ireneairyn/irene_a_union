@@ -552,11 +552,6 @@ ul.skills li{
   text-align:center;
 
 }
-.portfolio-item .portfolio-title span:before{
-  content: "- ";
-
-}
-
 
 .portfolio-item img{
   -webkit-transition: all 200ms ease-out;
